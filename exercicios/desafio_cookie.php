@@ -8,7 +8,13 @@
   <body>
 
   <?php
+    if (isset($_COOKIE['passou'])) {
+      echo 'Voce ja passou por aqui.';
+    } else {
+      echo 'Voce nunca passou por aqui';
 
+      setcookie('passou', 'sim', time() + 3600);
+    }
   ?>
 
   </body>
